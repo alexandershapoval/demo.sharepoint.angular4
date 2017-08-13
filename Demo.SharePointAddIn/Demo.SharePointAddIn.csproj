@@ -1,0 +1,141 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F93C8D7A-9581-4072-A492-C66B18FB43FC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Demo.SharePointAddIn</RootNamespace>
+    <AssemblyName>Demo.SharePointAddIn</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetOfficeVersion>16.1</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>12.2</MinimumOfficeToolsVersion>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{1e429484-516d-48b6-906a-0f1b650e3bb7}</AppFeaturePartId>
+    <WspPartId>{02db569d-34f1-4ede-923e-080baa22dd6a}</WspPartId>
+    <WorkflowPartId>{1fb7f0e2-71c8-4838-bf55-fb5639fca6b0}</WorkflowPartId>
+    <CspkgPartId>{8caef7fb-dea0-485d-b6e6-03f8ec9d2099}</CspkgPartId>
+    <SqlPackagePartId>{ee42a09b-bbe3-4635-b67b-b79928ae441c}</SqlPackagePartId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app\components\app.html" />
+    <Content Include="app\components\tasklist\tasklist-root\tasklist.html" />
+    <Content Include="config\config.js" />
+    <Content Include="config\hashing.js" />
+    <Content Include="config\helpers.js" />
+    <Content Include="config\karma-test-shim.js" />
+    <Content Include="config\karma.conf.js" />
+    <Content Include="config\webpack.common.js" />
+    <Content Include="config\webpack.dev.js" />
+    <Content Include="Elements.xml" />
+    <Content Include="Features\Demo.Angular4Feature\Demo.Angular4Feature.Template.xml">
+      <DependentUpon>Demo.Angular4Feature.feature</DependentUpon>
+    </Content>
+    <Content Include="index.html" />
+    <Content Include="Scripts\polyfills.js" />
+    <Content Include="Scripts\vendor.css" />
+    <Content Include="Scripts\vendor.js" />
+    <None Include="app\app-mixins.scss" />
+    <None Include="app\components\app.scss" />
+    <None Include="app\components\tasklist\tasklist-root\tasklist.scss" />
+    <None Include="app\sharepoint-reset.scss" />
+    <None Include="app\styles.scss" />
+    <None Include="Features\Demo.Angular4Feature\Demo.Angular4Feature.feature">
+      <FeatureId>{f55de439-f2eb-40d1-8bbb-e39891baf882}</FeatureId>
+    </None>
+    <None Include="package.json" />
+    <None Include="packages.config" />
+    <None Include="Pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3c1c2099-af20-4cd2-99f2-15ddea714388}</SharePointProjectItemId>
+    </None>
+    <Content Include="Pages\Elements.xml" />
+    <Content Include="Pages\Default.aspx" />
+    <None Include="SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b3464e40-9ade-4d7e-b2e8-a1dd51a829f5}</SharePointProjectItemId>
+    </None>
+    <None Include="tsconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ee42a09b-bbe3-4635-b67b-b79928ae441c}</SharePointProjectItemId>
+    </None>
+    <Content Include="Scripts\Elements.xml" />
+    <Content Include="Scripts\app.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4518ddfc-f904-4938-a202-75c7a3177874}</SharePointProjectItemId>
+    </None>
+    <Content Include="Content\Elements.xml" />
+    <Content Include="Content\App.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+    <Content Include="Images\Elements.xml" />
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2507c265-0898-47bd-8308-1c0c1891f6ca}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package\Package.package">
+      <PackageId>{1df186b7-9fad-4156-9c5d-db6a0c654d6f}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\components\app.component.ts" />
+    <TypeScriptCompile Include="app\components\tasklist\index.ts" />
+    <TypeScriptCompile Include="app\components\tasklist\tasklist-root\tasklist.component.ts" />
+    <TypeScriptCompile Include="app\components\tasklist\tasklist.module.ts" />
+    <TypeScriptCompile Include="app\main.ts" />
+    <TypeScriptCompile Include="app\polyfills.ts" />
+    <TypeScriptCompile Include="app\shared\components\index.ts" />
+    <TypeScriptCompile Include="app\shared\components\shared-components.module.ts" />
+    <TypeScriptCompile Include="app\shared\models\task.ts" />
+    <TypeScriptCompile Include="app\shared\services\task.service.ts" />
+    <TypeScriptCompile Include="app\shared\services\tasklist\index.ts" />
+    <TypeScriptCompile Include="app\shared\services\tasklist\tasklist.model.ts" />
+    <TypeScriptCompile Include="app\vendor.ts" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

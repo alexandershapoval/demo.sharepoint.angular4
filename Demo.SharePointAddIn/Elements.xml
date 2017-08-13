@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="RootModule">
+    <File Path="tsconfig.json" Url="tsconfig.json" ReplaceContent="TRUE" />
+    <File Path="app\shared\services\task.service.ts" Url="app/shared/services/task.service.ts" ReplaceContent="TRUE" />
+    <File Path="app\shared\models\task.ts" Url="app/shared/models/task.ts" ReplaceContent="TRUE" />
+    <File Path="app\shared\services\tasklist\index.ts" Url="app/shared/services/tasklist/index.ts" ReplaceContent="TRUE" />
+    <File Path="app\shared\services\tasklist\tasklist.model.ts" Url="app/shared/services/tasklist/tasklist.model.ts" ReplaceContent="TRUE" />
+    <File Path="app\components\tasklist\index.ts" Url="app/components/tasklist/index.ts" ReplaceContent="TRUE" />
+    <File Path="app\components\tasklist\tasklist.module.ts" Url="app/components/tasklist/tasklist.module.ts" ReplaceContent="TRUE" />
+    <File Path="app\shared\components\index.ts" Url="app/shared/components/index.ts" ReplaceContent="TRUE" />
+    <File Path="app\shared\components\shared-components.module.ts" Url="app/shared/components/shared-components.module.ts" ReplaceContent="TRUE" />
+    <File Path="app\components\tasklist\tasklist-root\tasklist.component.ts" Url="app/components/tasklist/tasklist-root/tasklist.component.ts" ReplaceContent="TRUE" />
+    <File Path="app\components\tasklist\tasklist-root\tasklist.html" Url="app/components/tasklist/tasklist-root/tasklist.html" ReplaceContent="TRUE" />
+    <File Path="app\components\tasklist\tasklist-root\tasklist.scss" Url="app/components/tasklist/tasklist-root/tasklist.scss" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

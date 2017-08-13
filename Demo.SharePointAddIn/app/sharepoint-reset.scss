@@ -1,0 +1,32 @@
+﻿#s4-bodyContainer #s4-titlerow,
+#s4-bodyContainer #sideNavBox,
+#s4-bodyContainer #s4-titlerow {
+    display: none !important;
+}
+
+#s4-bodyContainer #contentRow {
+    padding-top: 0;
+}
+
+#s4-bodyContainer #contentBox {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#s4-ribbonrow {
+    display: none;
+}
+#suiteBarLeft {
+    background-color: #3a3a3a;
+}
+
+#suiteBar , #s4-ribbonrow  
+{
+    -webkit-box-sizing: initial;
+    -moz-box-sizing: initial;
+    box-sizing: content-box;
+}
+
+button {
+    min-width: initial;
+}

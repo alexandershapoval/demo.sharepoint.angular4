@@ -1,0 +1,17 @@
+﻿<div style="margin: auto; max-width: 1000px; margin-bottom: 50px;">
+    <data-table id="task-grid" 
+                headerTitle="Tasks" 
+                [items]="tasks" 
+                [itemCount]="itemCount" 
+                [rowTooltip]="rowTooltip"
+                (reload)="reloadItems($event)" 
+                (rowClick)="rowClick($event)" 
+                (rowDoubleClick)="rowDoubleClick($event)">
+        <data-table-column [property]="'Title'" 
+                           [header]="'Title'">
+        </data-table-column>
+        <data-table-column [property]="'Status'" 
+                           [header]="'Status'">
+        </data-table-column>
+    </data-table>
+</div>

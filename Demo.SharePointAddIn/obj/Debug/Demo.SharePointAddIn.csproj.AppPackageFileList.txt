@@ -1,0 +1,1 @@
+C:\Users\Administrator\documents\visual studio 2017\Projects\Demo.SharePointAddIn\Demo.SharePointAddIn\bin\Debug\app.publish\1.0.0.0\Demo.SharePointAddIn.app
